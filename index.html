@@ -55,8 +55,13 @@
       color: white;
       font-family: 'Noto Sans', sans-serif;
     }
-
-        .open-button {
+ 
+    body {
+    background-image: url('wallpaper.png'); /* Provide the URL of the image */
+    background-size: cover; /* Adjust how the image is displayed */
+  }
+       
+    .open-button {
             background-color: black;
             color: white;
             font-size: 18px;
@@ -68,6 +73,7 @@
             top: 20px;
             z-index: 9999;
             font-family: 'Noto Sans', sans-serif;
+            user-select: none;
         }
 
         .picture-grid {
@@ -90,19 +96,23 @@
     }
 
     </style>
-    <script>
-      function toggleNav() {
-            var mySidenav = document.getElementById("mySidenav");
-            var openButton = document.getElementsByClassName("open-button")[0];
-
-            if (mySidenav.style.width === "250px") {
-                mySidenav.style.width = "0";
-            } else {
-                mySidenav.style.width = "250px";
-            }
-        }
-        
-    </script>
+<script>
+    function toggleNav() {
+ var mySidenav = document.getElementById("mySidenav");
+ var main = document.getElementById("main");
+ var openButton = document.getElementsByClassName("open-button")[0];
+ 
+ if (mySidenav.style.width === "250px") {
+     mySidenav.style.width = "0";
+     main.style.marginRight = "0";
+     openButton.innerHTML = "Open"; // Change the button text to "Open"
+ } else {
+     mySidenav.style.width = "250px";
+     main.style.marginRight = "250px";
+     openButton.innerHTML = "Close"; // Change the button text to "Close"
+ }
+}
+ </script>
 </head>
 <body>
     <div id="mySidenav" class="sidenav">
@@ -137,14 +147,14 @@
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page) -->
     <div id="main">
         <div class="picture-grid">
-            <img src="pictures2.png" alt="Picture 1">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
-            <img src="pictures2.png" alt="Picture 2">
+            <img src="picture (1).png" alt="Picture 1">
+            <img src="picture (2).jpeg" alt="Picture 2">
+            <img src="picture (3).jpeg" alt="Picture 2">
+            <img src="picture (4).jpeg" alt="Picture 2">
+            <img src="picture (5).jpeg" alt="Picture 2">
+            <img src="picture (6).jpeg" alt="Picture 2">
+            <img src="picture (7).jpeg" alt="Picture 2">
+          
             
             <!-- Add more images here -->
         </div>

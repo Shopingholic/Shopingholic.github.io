@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Roboto&display=swap">
 
     <h1> Shopingholic </h1>
+    <h2> Hey, I'm Alex, also known as Shopingholic in the online world. While I'm originally from Serbia, Turkey has become my home. I'm a blogger with a passion for everything related to fashion, and I love sharing that passion with other style enthusiasts like you. If you're into fashion and lifestyle, don't miss checking out my Instagram! </h3>
+
     <style>
 
 
+h2 {
+  text-align: center;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  
+}
+
+
+
+
+
+ 
+ body {
+    background-image: url('wallpaper.png'); /* Provide the URL of the image */
+    background-size: cover; /* Adjust how the image is displayed */
+  }
 .nav-buttons {
             display: flex;
             justify-content: space-between;
@@ -24,7 +46,28 @@
             position: relative;
             width: 80px; /* Adjust the width as needed */
         }
-        
+
+
+
+.container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .picture-grid {
+            width: 100%;
+            max-width: 960px;
+        }
+
+        .picture-grid img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+
     h1 {
       text-align: center;
       position: absolute;
@@ -35,9 +78,8 @@
       font-family: 'Noto Sans', sans-serif;
     }
 
-
-    
-        .open-button {
+       
+    .open-button {
             background-color: black;
             color: white;
             font-size: 18px;
@@ -68,26 +110,27 @@
 
         a {
             font-family: 'Noto Sans', sans-serif;
+            
     }
 
     </style>
-    <script>
-       function toggleNav() {
-    var mySidenav = document.getElementById("mySidenav");
-    var main = document.getElementById("main");
-    var openButton = document.getElementsByClassName("open-button")[0];
-    
-    if (mySidenav.style.width === "250px") {
-        mySidenav.style.width = "0";
-        main.style.marginRight = "0";
-        openButton.innerHTML = "Open"; // Change the button text to "Open"
-    } else {
-        mySidenav.style.width = "250px";
-        main.style.marginRight = "250px";
-        openButton.innerHTML = "Close"; // Change the button text to "Close"
-    }
+<script>
+    function toggleNav() {
+ var mySidenav = document.getElementById("mySidenav");
+ var main = document.getElementById("main");
+ var openButton = document.getElementsByClassName("open-button")[0];
+ 
+ if (mySidenav.style.width === "250px") {
+     mySidenav.style.width = "0";
+     main.style.marginRight = "0";
+     openButton.innerHTML = "Open"; // Change the button text to "Open"
+ } else {
+     mySidenav.style.width = "250px";
+     main.style.marginRight = "250px";
+     openButton.innerHTML = "Close"; // Change the button text to "Close"
+ }
 }
-    </script>
+ </script>
 </head>
 <body>
     <div id="mySidenav" class="sidenav">
@@ -121,9 +164,15 @@
 
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page) -->
     <div id="main">
-     
+        <div class="picture-grid">
+            
+          
+            
+            <!-- Add more images here -->
+        </div>
     </div>
 
+    <!-- Use the open-button class for the open button -->
     <span class="open-button" onclick="toggleNav()">Open</span>
 </body>
 </html>
